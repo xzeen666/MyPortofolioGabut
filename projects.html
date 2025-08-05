@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 2030</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    .floating-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #ffbb00;
+      color: rgb(255, 251, 0);
+      border: none;
+      border-radius: 50%;
+      padding: 16px 20px;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 999;
+      transition: background-color 0.3s ease;
+    }
+
+    .floating-button:hover {
+      background-color: #ffaa00;
+    }
+
+    .job-list {
+      margin-top: 20px;
+      padding: 20px;
+      background: #000000;
+      border-radius: 8px;
+    }
+
+    .job-list h4 {
+      margin-bottom: 10px;
+    }
+
+    .job-list ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .job-list ul li {
+      padding: 10px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #01ffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .job-icon {
+      font-size: 24px;
+      color: #ff02b3;
+    }
+
+    .logo a {
+      color: #fff;
+      font-weight: 700;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    /* Scroll down arrow */
+    .scroll-down {
+      position: fixed;
+      bottom: 100px;
+      right: 50px;
+      font-size: 28px;
+      color: #ffbb00;
+      animation: bounce 1.5s infinite;
+      z-index: 998;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Toolbar -->
+  <nav class="toolbar">
+    <div class="container">
+      <h1 class="logo"><a href="index.html">MyPorto</a></h1>
+      <ul class="nav-menu">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h3 class="section-title">Project 2030</h3>
+      
+      <!-- List of Future-Proof Jobs -->
+      <div class="job-list">
+        <h4>Pekerjaan yang Berguna Hingga Tahun 2030:</h4>
+        <ul>
+          <li><i class="fas fa-database job-icon"></i> Data Analyst & Data Scientist</li>
+          <li><i class="fas fa-code job-icon"></i> Software Developer & AI Engineer</li>
+          <li><i class="fas fa-leaf job-icon"></i> Spesialis Energi Terbarukan</li>
+          <li><i class="fas fa-shield-alt job-icon"></i> Cyber Security Analyst</li>
+          <li><i class="fas fa-bullhorn job-icon"></i> Digital Marketing Specialist</li>
+          <li><i class="fas fa-user-nurse job-icon"></i> Tenaga Medis & Perawat</li>
+          <li><i class="fas fa-pencil-ruler job-icon"></i> UX/UI Designer</li>
+          <li><i class="fas fa-robot job-icon"></i> Automation & Robotics Engineer</li>
+        </ul>
+      </div>
+
+      <!-- Kosongkan project-list, akan terisi dari JSON jika kamu aktifkan -->
+      <div id="project-list" class="project-grid"></div>
+    </div>
+  </section>
+
+  <!-- Social Media Icons -->
+  <section class="section">
+    <div class="container">
+      <h3 class="section-title">Follow Me</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/radhohdii_27?utm_source=qr&igsh=bzk2cXJ3cXFkMXZy" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@radhozork5838" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.tiktok.com/@ryuuzeen_" target="_blank">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ZEEN969. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Down Arrow -->
+  <div class="scroll-down">
+    <i class="fas fa-arrow-down"></i>
+  </div>
+
+  <!-- Floating Button -->
+  <a href="https://bitcoin.org/id/" 
+     class="floating-button" 
+     target="_blank" 
+     title="Buka Grafik Trading">
+    <i class="fas fa-chart-line"></i>
+  </a>
+
+</body>
+</html>

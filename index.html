@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Radho's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Toolbar -->
+  <nav class="toolbar">
+    <div class="container">
+      <h1 class="logo">MyPorto</h1>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <h2>Hello, I’m <span class="highlight">Radho Hadii</span></h2>
+      <p class="subtitle">Aspiring Web Developer & Digital Designer</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/radhohdii_27?utm_source=qr&igsh=bzk2cXJ3cXFkMXZy" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@radhozork5838" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@ryuuzeen_" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h3 class="section-title">About Me</h3>
+      <p>Saya adalah pelajar yang suka sekali trading, belajar memahami apa itu politik keuangan, bahkan seringkali belajar mengenai investasi agar saya bisa menjadi trader profesional yang banyak koneksi dan relasi.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h3 class="section-title">Contact Me</h3>
+      <p>Email: <a href="mailto:radhohadiip@gmail.com">radhohadiip@gmail.com</a></p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/radhohdii_27?utm_source=qr&igsh=bzk2cXJ3cXFkMXZy" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@radhozork5838" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@ryuuzeen_" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ZEEN969. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Load Projects JSON -->
+  <script>
+    fetch('projects.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('project-list');
+        if (container && data.projects) {
+          data.projects.forEach(p => {
+            container.innerHTML += `
+              <div class="card fade-in">
+                <a href="${p.link}" target="_blank">
+                  <img src="${p.image}" alt="${p.title}" class="project-img"/>
+                  <h4>${p.title}</h4>
+                  <p>${p.description}</p>
+                </a>
+              </div>`;
+          });
+        }
+      });
+  </script>
+
+</body>
+</html>
